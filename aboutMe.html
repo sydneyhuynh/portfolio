@@ -1,27 +1,29 @@
 
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>sydney</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
 
-<div class="container">
+<div class="w3-container">
+  <!-- <h2>Active Tabs</h2> -->
+  <!-- <p>To highlight the current tab/page the user is on, add a color class, and use JavaScript to update the active link.</p> -->
+  <h2>                        </h2>
+
+  <div class="w3-bar w3-black">
+    <button class="w3-bar-item w3-button tablink w3-purple" onclick="openCity(event,'home')">home</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'about')">about</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'portfolio')">portfolio</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'resume')">resume</button>
+    
+  </div>
   
-  <h1>    </h1>
-  <ul class="nav nav-pills">
-    <li class="active"><a data-toggle="pill" href="#home">home</a></li>
-    <li><a data-toggle="pill" href="#menu1">about</a></li>
-    <li><a data-toggle="pill" href="#menu2">portfolio</a></li>
-    <li><a data-toggle="pill" href="#menu3">resume</a></li>
-  </ul>
-  
-  <div class="tab-content"><!DOCTYPE html>
+  <div id="home" class="w3-container w3-border city">
+    <h2>home</h2>
+    <p>homeinfo.</p>
+	  <!DOCTYPE html>
 <html>
 <head>
 <style>
@@ -52,33 +54,39 @@ p {
 <img src="https://cdn.dribbble.com/users/431675/screenshots/2557229/attachments/506482/free_purple_madness_by_stella.png" alt="floral" style="width:1150px;height:750px;"> 
 
 
-</body>
-</html>
+  </div>
 
+  <div id="about" class="w3-container w3-border city" style="display:none">
+    <h2>about</h2>
+    <p>about me.</p> 
+  </div>
 
-
-    <div id="home" class="tab-pane fade in active">
-      <style>  top: 1000px; </style>
-      <h3>HOME</h3>
-      <p>home info...</p>
-    </div>
-    <div id="menu1" class="tab-pane fade">
-      <h3>about me</h3>
-      <p>about me info...</p>
-    </div>
-    <div id="menu2" class="tab-pane fade">
-      <h3>portfolio</h3>
-      <p>portfolio info...</p>
-    </div>
-    <div id="menu3" class="tab-pane fade">
-      <h3>resume</h3>
-      <p>resume</p>
-    </div>
+  <div id="portfolio" class="w3-container w3-border city" style="display:none">
+    <h2>portfolio</h2>
+    <p>portfolio</p>
+    
+    <div id="resume" class="w3-container w3-border city" style="display:none">
+    <h2>resume</h2>
+    <p>resume</p>
+    
   </div>
 </div>
 
-</body>
-</html>
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-purple", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-purple";
+}
+</script>
 
 </body>
 </html>
